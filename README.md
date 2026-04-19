@@ -93,8 +93,34 @@ The proposed pipeline begins with a virtual checkerboard of known dimensions pla
 15. (Optional) Transfer pipeline to real camera:
     - Capture real checkerboard images
     - Repeat calibration steps
+   
+    ---
+
+## Results and Discussions
+
+## Results
+
+### 1. Experimental Setup
+
+Camera calibration was performed for both a real-world camera and a simulated camera in Gazebo under three different lighting conditions: **normal**, **dark**, and **bright**. A checkerboard-based calibration approach was used to estimate the intrinsic camera matrix \(K\) in each case.
+
+---
+
+### 2. Intrinsic Parameter Estimation
+
+#### 🔹 Real Camera
+K =
+[ 443.1745 0 330.6470
+0 444.2642 239.7898
+0 0 1.0000 ]
 
 
+#### 🔹 Simulated (Normal Lighting)
+
+K =
+[ 420.8547   0        319.9706
+  0        420.8222   240.4167
+  0          0          1.0000 ]
 
 
 
