@@ -123,5 +123,57 @@ K =
   0          0          1.0000 ]
 
 
+#### 🔹 Simulated (Dark Lighting)
+
+K =
+[ 420.7664 0 320.0425
+0 420.7587 240.3340
+0 0 1.0000 ]
+
+
+#### 🔹 Simulated (Bright Lighting)
+
+K =
+[ 420.0243 0 319.9977
+0 419.9947 240.4796
+0 0 1.0000 ]
+
+
+---
+
+### 3. Quantitative Evaluation
+
+To measure the Sim-to-Real gap, the percentage error between simulated and real intrinsic parameters was computed:
+
+| Condition       | fx (%) | fy (%) | cx (%) | cy (%) |
+|-----------------|--------|--------|--------|--------|
+| Normal Lighting | 5.03   | 5.28   | 3.23   | 0.26   |
+| Dark Lighting   | 5.05   | 5.29   | 3.21   | 0.23   |
+| Bright Lighting | 5.23   | 5.47   | 3.22   | 0.29   |
+
+---
+
+### 4. Analysis
+
+The results highlight a consistent discrepancy between simulated and real camera intrinsics:
+
+- The focal lengths (\(f_x, f_y\)) exhibit a stable deviation of approximately **5%**, indicating a systematic difference in effective field-of-view between simulation and reality.  
+- The principal point coordinates (\(c_x, c_y\)) show significantly lower error (**≤ 3.3%**), suggesting accurate alignment of the image center in the simulation.  
+- Across all lighting conditions, the variation in intrinsic parameters is negligible, demonstrating that **lighting changes do not significantly affect geometric calibration**.
+
+---
+
+### 5. Key Observations
+
+- ✅ **Geometric Stability:** Intrinsic parameters remain consistent across lighting variations  
+- ⚠️ **Systematic Focal Length Gap (~5%):** Indicates mismatch in camera modeling (FOV / optics)  
+- ✅ **Accurate Principal Point Alignment:** Simulation closely matches real-world image centering  
+- 🔍 **Photometric vs Geometric Decoupling:** Lighting affects appearance but not intrinsic calibration  
+
+---
+
+### 6. Conclusion
+
+> The experimental results demonstrate that while the simulated camera maintains strong geometric consistency across varying lighting conditions, a persistent ~5% deviation in focal length highlights a critical Sim-to-Real gap. This suggests that improving intrinsic camera modeling—particularly field-of-view and optical characteristics—is essential for achieving high-fidelity Digital Twin representations.
 
 
