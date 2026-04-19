@@ -106,6 +106,19 @@ The proposed pipeline begins with a virtual checkerboard of known dimensions pla
 
 ## Results
 
+<p align="center">
+  <img src="results/Calibration_Result(Simulated-NormalLight).png" width="400"/>
+  <img src="results/Calibration_Result(Real).png" width="400"/>
+  <br>
+  <em>Figure: Sim(Left image)-to-Real(Right image) Camera Calibration Results</em>
+</p>
+
+<p align="center">
+  <img src="images/Architecture_diagram.png" width="800"/>
+  <br>
+  <em>Figure: Sim-to-Real Camera Calibration Pipeline</em>
+</p>
+
 ### 1. Experimental Setup
 
 Camera calibration was performed for both a real-world camera and a simulated camera in Gazebo under three different lighting conditions: **normal**, **dark**, and **bright**. A checkerboard-based calibration approach was used to estimate the intrinsic camera matrix \(K\) in each case.
