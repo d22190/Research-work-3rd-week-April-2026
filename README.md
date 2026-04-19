@@ -46,7 +46,7 @@ Simulated cameras often lack realistic noise characteristics, resulting in overl
 The proposed pipeline begins with a virtual checkerboard of known dimensions placed within the Gazebo simulation environment. A simulated camera captures multiple images of the checkerboard from diverse viewpoints, ensuring sufficient variation in perspective. These images are then processed using OpenCV to detect and refine checkerboard corner features. Using the detected 2D image points and corresponding 3D world coordinates, camera calibration is performed to estimate intrinsic parameters and lens distortion coefficients. The quality of calibration is subsequently evaluated through reprojection error analysis, which quantifies the difference between observed and projected points. Finally, the validated calibration pipeline is extended toward Sim-to-Real transfer, enabling its application to real-world camera systems while maintaining consistency with the simulated setup.
 
 <p align="center">
-  <img src="images/Architecture.png"/>
+  <img src="images/Architecture.png" width="800"/>
   <br>
   <em>Figure: Sim-to-Real Camera Calibration Pipeline</em>
 </p>
